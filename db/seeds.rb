@@ -8,7 +8,13 @@
 
 
 
-Playlist.create(img: 'Flower', title: 'Folksy Songs', desc: 'Songs to listen to when moody.', id: 1)
-Playlist.create(img: 'Truck', title: 'Country Time', desc: 'Time to two-step.', id: 2)
-Playlist.create(img: 'Guitar', title: 'Rock Songs from the 80s', desc: 'When you are feeling nostalgic.', id:3)
-Playlist.create(img: 'Taylor Swift', title: 'Taylor Time', desc: 'All of T-swifts Hits.', id: 4)
+Playlist.create(img: 'Flower', title: 'Folksy Songs', desc: 'Songs to listen to when moody.')
+Playlist.create(img: 'Truck', title: 'Country Time', desc: 'Time to two-step.')
+Playlist.create(img: 'Guitar', title: 'Rock Songs from the 80s', desc: 'When you are feeling nostalgic.')
+Playlist.create(img: 'Taylor Swift', title: 'Taylor Time', desc: 'All of T-swifts Hits.')
+
+Artist.create(name: 'Taylor Swift', desc: 'Country', playlist_id: 3)
+Artist.create(name: 'Bon Iver', desc: 'Folk', playlist_id: 3)
+Artist.create(name: 'Sia', desc: 'Pop', playlist_id: 3) 
+
+# p Artists.all

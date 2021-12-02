@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Playlists = ({ playlists }) => {
+
+  
   return (
   <>
     <h1>Spotify Playlist</h1>

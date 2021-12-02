@@ -15,14 +15,14 @@ const PlaylistNew = ({ playlist }) => {
           placeholder="Playlist Name"
           required
           defaultValue={defaultTitle}
-          name="playlist[name]"
+          name="playlist[title]"
         />
         <input
           type="text"
           placeholder="Image Description"
           required
           defaultValue={defaultImg}
-          name="playlist[image]"
+          name="playlist[img]"
         />
         <textarea
         required
