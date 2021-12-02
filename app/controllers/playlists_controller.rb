@@ -1,22 +1,22 @@
-class PlaylistController < ApplicationController
+class PlaylistsController < ApplicationController
   def index
     @playlists = Playlist.all 
-    render component: 'Playlists' props: { playlists: @playlists }
+    render component: 'Playlists', props: { playlists: @playlists}
   end
 
   def show
-    @playlist = Playlist.fine(params[:id])
-    render component: 'PlaylistName' props: { playlist: @playlist }
+    @playlist = Playlist.find(params[:id])
+    render component: 'Playlist', props: { playlist: @playlist }
   end
 
   def new
     @playlist = Playlist.new
-    render component: 'PlaylistNew' props: { playlist: @playlist }
+    render component: 'PlaylistNew', props: { playlist: @playlist }
   end
 
   def edit
     @playlist = Playlist.find(params[:id])
-    render component: 'PlaylistEdit' props: { playlist: @playlist }
+    render component: 'PlaylistEdit', props: { playlist: @playlist }
   end
 
   def create
@@ -40,10 +40,11 @@ class PlaylistController < ApplicationController
   def destroy
     @playlist = Playlist.find(params[:id])
     @playlist.destroy
+    redirect_to root_path
   end
 
   private
-  def sub_params
+  def playlist_params
     params.require(:playlist).permit(:title)
   end
 

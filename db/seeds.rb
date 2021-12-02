@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+
+Playlist.create(img: 'Flower', title: 'Folksy Songs', desc: 'Songs to listen to when moody.', id: 1)
+Playlist.create(img: 'Truck', title: 'Country Time', desc: 'Time to two-step.', id: 2)
+Playlist.create(img: 'Guitar', title: 'Rock Songs from the 80s', desc: 'When you are feeling nostalgic.', id:3)
+Playlist.create(img: 'Taylor Swift', title: 'Taylor Time', desc: 'All of T-swifts Hits.', id: 4)

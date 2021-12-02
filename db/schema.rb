@@ -19,8 +19,10 @@ ActiveRecord::Schema.define(version: 2021_12_02_042731) do
     t.string "img"
     t.string "title"
     t.string "desc"
+    t.bigint "playlist_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["playlist_id"], name: "index_comments_on_playlist_id"
   end
 
 end
