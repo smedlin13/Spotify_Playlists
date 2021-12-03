@@ -17,6 +17,7 @@ const Playlists = ({ playlists }) => {
         </>  
       )) } 
     <a href="/playlists/new">Add Song to Playlist</a> 
+    <a href="/playlists/">Back</a>
   </>
   )
 }
