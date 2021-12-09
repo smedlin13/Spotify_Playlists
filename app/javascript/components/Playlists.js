@@ -6,6 +6,7 @@ const Playlists = ({ playlists }) => {
   return (
   <>
     <h1>Spotify Playlist</h1>
+    {/* <h1>{playlists.name}</h1> */}
       
       { playlists.map( (playlist) => (
         <>
@@ -16,7 +17,7 @@ const Playlists = ({ playlists }) => {
         </a>
         </>  
       )) } 
-    <a href="/playlists/new">Add Song to Playlist</a> 
+    <button><a href="/playlists/new">Add Playlist</a></button> 
     <a href="/playlists/">Back</a>
   </>
   )

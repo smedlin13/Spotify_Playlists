@@ -9,8 +9,8 @@ const Playlist = ({ playlist }) => {
       <h2>{img}</h2>
       <p>{desc}</p>
       <p>Created: {created_at}, id:{id}</p>
-      <a href="/">Back</a>
-      <a href={`/playlists/${id}/artists/`}>See what's on the playlist</a>
+      <a href="/">Back</a><br />
+      <a href={`/playlists/${id}/artists/`}>See what artists are on the playlist</a>
     </>
   )
 }

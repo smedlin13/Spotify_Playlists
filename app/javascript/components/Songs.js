@@ -1,11 +1,12 @@
 import React from 'react';
 
-const Songs = ({ artist, song, playlist }) => {
+const Songs = ({ songs, artist }) => {
 
-  const { name, id } = playlist
+  // const { id } = playlist
   
-
-  const url = `/playlists/${playlist.id}/artists/${artist.id}/songs/`
+  const { title, length } = songs
+  
+  const url = `/artists/${artist.id}/songs/`
   
   return (
   <>
@@ -15,14 +16,15 @@ const Songs = ({ artist, song, playlist }) => {
         <>
         <h3>{song.title}</h3>
         <p>{song.length}</p>
-        <a href={`${url}${song.id}`}>Show</a>
-        <a href={`${url}${song.id}/edit`}>Edit</a>
-        <a href={`${url}${song.id}`} data-method='delete'>Delete
-        </a>
+        <a href={`${url}${song.id}`}>Play Song</a><br />
+        <a href={`${url}${song.id}/edit`}>Edit Song Title</a><br />
+        <a href={`${url}${song.id}`} data-method='delete'>Delete Song</a>
         </>  
       )) } 
-    <a href={`/playlists/${playlist.id}/artists/${artist.id}/songs/new`}>Add a song that the artist plays.</a>
-    
+      <br /><br />
+    <a href={`/artists/${artist.id}/songs/new`}>Add a song that the artist plays.</a>
+    <br />
+    <a href={`/`}>Back to Playlists</a>
   </>
   )
 }

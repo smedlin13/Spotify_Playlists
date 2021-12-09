@@ -26,7 +26,7 @@ class ArtistsController < ApplicationController
 
   def edit
     @artist = @playlist.artists.find(params[:id])
-    render component: 'ArtistEdit', props: { playlist: @playlist, artist: @artist}
+    render component: 'ArtistEdit', props: { playlist: @playlist, artist: @artist }
   end
   
   def update
@@ -34,7 +34,7 @@ class ArtistsController < ApplicationController
     if @artist.update(artist_params)
       redirect_to playlist_artists_path(@artist)
     else
-      render component: 'ArtistEdit', props: { playlist: @playlist, artist: @artist}
+      render component: 'ArtistEdit', props: { playlist: @playlist, artists: @artists}
     end
   end
 

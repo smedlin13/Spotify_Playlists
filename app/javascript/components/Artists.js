@@ -15,14 +15,15 @@ const Artists = ({ playlist, artists }) => {
         <>
         <h3>{artist.name}</h3>
         <p>{artist.desc}</p>
-        <a href={`${url}${artist.id}`}>Show</a>
-        <a href={`${url}${artist.id}/edit`}>Edit</a>
-        <a href={`${url}${artist.id}`} data-method='delete'>Delete
+        <a href={`${url}/${artist.id}`}>Show</a><br />
+        <a href={`${url}/${artist.id}/edit`}>Edit</a><br />
+        <a href={`${url}/${artist.id}`} data-method='delete'>Delete<br /><br />
         </a>
         </>  
       )) } 
-    <a href={`/playlists/${id}/artists/new`}>Add a song to the playlist.</a>
-    
+    <button type="submit"><a href={`/playlists/${id}/artists/new`}>Add a song to the playlist.</a></button>
+    <br />
+    <a href={`/playlists/${id}/`}>Back to Playlist</a>
   </>
   )
 }

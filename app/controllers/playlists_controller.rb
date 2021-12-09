@@ -40,12 +40,12 @@ class PlaylistsController < ApplicationController
   def destroy
     @playlist = Playlist.find(params[:id])
     @playlist.destroy
-    redirect_to root_path
+    redirect_to playlist_path
   end
 
   private
   def playlist_params
-    params.require(:playlist).permit(:title, :img, :desc)
+    params.require(:playlist).permit(:title, :img, :desc )
   end
 
   def set_playlist

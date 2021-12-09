@@ -9,7 +9,7 @@ const SongEdit = ({ song, playlist, artist }) => {
   return (
     <>
       <h1>Edit the Song</h1>
-      <form action={`/playlists/${playlist.id}/artists/${artist.id}/songs`} method="post">
+      <form action={`/artists/${artist.id}/songs/${song.id}`} method="post">
         <input type="hidden" name="_method" value="patch" />
         <input
           type="text"
@@ -22,14 +22,14 @@ const SongEdit = ({ song, playlist, artist }) => {
           type="integer"
           placeholder="Song Length"
           required
-          defaultValue={default Length}
+          defaultValue={defaultLength}
           name="song[length]"
                   />
       
         <button type="submit">Add Song</button>
 
       </form>
-      <a href={`/playlists/${playlist.id}/artist/${artist.id}/`}>Back to Artist</a>
+      <a href={`/artist/${artist.id}/`}>Back to Artist</a>
     </>
   )
 

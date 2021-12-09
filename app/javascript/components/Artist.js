@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Artist = ({ playlist, artist }) => {
+const Artist = ({ artist }) => {
 
   const { name, desc, id } = artist
   return(
@@ -8,8 +8,8 @@ const Artist = ({ playlist, artist }) => {
       <h3>{name}</h3>
       <p>{desc}</p>
       <p>Id:{id}</p>
-      <a href={`/playlists/${playlist.id}`}>Back</a>
-      <a href={`/playlists/${id}/artists/`}>See {artist.name} songs</a>
+      <a href={`/playlists`}>Back</a>
+      <a href={`/artists/${id}/songs`}>See {name} songs</a>
     </>
   )
 }
